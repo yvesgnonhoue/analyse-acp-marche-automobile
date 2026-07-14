@@ -27,7 +27,7 @@ On démarre par la réalisation de la SVD généralisée. Pour ce faire, nous al
 
 Où :
 
-$S$ est la matrice diagonale contenant les valeurs singulières de $Y$ classées par ordre décroissant.
+* **$S$** est la matrice diagonale contenant les valeurs singulières de $Y$ classées par ordre décroissant.
 $U_Y$ est la matrice des vecteurs singuliers à gauche de $Y$ (taille  $n \times p$).
 $V_Y$ est la matrice des vecteurs singuliers à droite de $Y$ (taille  $p \times p$).
 
