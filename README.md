@@ -21,24 +21,25 @@ Si nous réalisions une ACP non-normée (sur les données brutes), les variables
 ## 📝 2. La Modélisation Mathématique.
 
 Notre jeu de données étant sans valeurs manquantes, nous allons procéder à la mathématisation.
-Nous désignons $X$ comme la matrice centrée et réduite issue de notre jeu de données de taille $$n = 6$$ (représentant les lignes/individus) et $$p = 4$$ (représentant les colonnes/variables).
+Nous désignons $$X$$ comme la matrice centrée et réduite issue de notre jeu de données de taille $$n = 6$$ (représentant les lignes/individus) et $$p = 4$$ (représentant les colonnes/variables).
 
 On démarre par la réalisation de la SVD généralisée. Pour ce faire, nous allons en premier poser : $$Y = D^{1/2}XM^{1/2}$$ et ensuite réaliser la SVD réduite de Y : $$Y = U_Y S V_Y^T$$
 
 Où :
 
-* **$S$** est la matrice diagonale contenant les valeurs singulières de $Y$ classées par ordre décroissant.
-$U_Y$ est la matrice des vecteurs singuliers à gauche de $Y$ (taille  $n \times p$).
-$V_Y$ est la matrice des vecteurs singuliers à droite de $Y$ (taille  $p \times p$).
+* **$S$**  est la matrice diagonale contenant les valeurs singulières de $Y$ classées par ordre décroissant.
+* **$$U_Y$$** est la matrice des vecteurs singuliers à gauche de $Y$ (taille  $n \times p$).
+* **$$V_Y$$** est la matrice des vecteurs singuliers à droite de $Y$ (taille  $p \times p$).
+* **Les Métriques $$D$$ et $$M$$**
+  
+Pour notre ACP normée (standardisée), nous définissons :
+La matrice des poids des individus $$D = \frac{1}{n} I_n$$.
+La métrique des variables $$M = I_p$$ (identité).
+Retour aux facteurs d'origine ($$U$$ et $$V$$)Pour retrouver les facteurs propres du triplet $$(X, D, M)$$, on applique les transformations inverses :
 
-Les Métriques $D$ et $M$Pour notre ACP normée (standardisée), nous définissons :
-La matrice des poids des individus $D = \frac{1}{n} I_n$.
-La métrique des variables $M = I_p$ (identité).
-Retour aux facteurs d'origine ($U$ et $V$)Pour retrouver les facteurs propres du triplet $(X, D, M)$, on applique les transformations inverses :
+$$U = D^{-1/2} U_Y$$
 
-$U = D^{-1/2} U_Y$
-
-$V = M^{-1/2} V_Y$
+$$V = M^{-1/2} V_Y$$
 
 Ces matrices vérifient les conditions d'orthogonalité généralisées : $U^T D U = I_p$  et  $V^T M V = I_p$.
 
