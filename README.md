@@ -21,9 +21,9 @@ Si nous réalisions une ACP non-normée (sur les données brutes), les variables
 ## 📝 2. La Modélisation Mathématique.
 
 Notre jeu de données étant sans valeurs manquantes, nous allons procéder à la mathématisation.
-Nous désignons $X$ comme la matrice centrée et réduite issue de notre jeu de données de taille $n = 6$ (représentant les lignes/individus) et $p = 4$ (représentant les colonnes/variables).
+Nous désignons $X$ comme la matrice centrée et réduite issue de notre jeu de données de taille $$n = 6$$ (représentant les lignes/individus) et $$p = 4$$ (représentant les colonnes/variables).
 
-On démarre par la réalisation de la SVD généralisée. Pour ce faire, nous allons en premier poser : $Y = D^{1/2}XM^{1/2}$ et ensuite réaliser la SVD réduite de Y : $Y = U_Y S V_Y^T$
+On démarre par la réalisation de la SVD généralisée. Pour ce faire, nous allons en premier poser : $$Y = D^{1/2}XM^{1/2}$$ et ensuite réaliser la SVD réduite de Y : $$Y = U_Y S V_Y^T$$
 
 Où :
 
